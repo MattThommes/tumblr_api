@@ -38,6 +38,8 @@ Put the name of the blog you want to access in the `fetch_posts.php` script:
 
 This script will fetch all blog posts from any blog you have access to. Posts are then accessible through the `$tumblr_posts` variable.
 
+The code you want to run for each post should reside in `fetch_posts.inc.php` which is included by `fetch_posts.php` (within the loop) already.
+
 ### wordpress2tumblr.php
 
 This script will grab posts from your WordPress database and create a corresponding post on Tumblr.
