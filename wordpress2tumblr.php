@@ -5,7 +5,7 @@
 	$debug = new Debug;
 
 	// database connection to your WordPress blog tables.
-	$db_conn = new Mysql("localhost", "user", "password", "database_name");
+	$db_conn = new Mysql("localhost", "user", "pass", "database_name");
 
 	require_once("auth_tokens.php");
 
@@ -14,6 +14,22 @@
 
 	$blog_name = "your-blog";
 	$blog_domain = "blog.me.com"; // your Tumblr domain, or custom domain.
+
+	// get existing data, so we can create the serialized array to put into our existing WP install to handle the redirects.
+/*
+	$rows = $db_conn->query("SELECT * FROM tumblr ORDER BY id ASC")->fetch_array();
+	$_301s = array("/" => "http://" . $blog_domain);
+
+	foreach ($rows as $row) {
+		// get just the new URL.
+		$_301_pieces = explode(" ", $row["301"]);
+		$_301s[$row["wp_uri"]] = $_301_pieces[3];
+	}
+
+	$_301s = serialize($_301s);
+	echo $_301s;
+	exit;
+*/
 
 	$id = 0; // if you just want to import a single post, use it's WP id.
 	$skipover = 1866; // this should always be the total number of rows in `tumblr` DB table.
