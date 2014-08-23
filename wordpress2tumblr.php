@@ -2,10 +2,11 @@
 
 	require "vendor/autoload.php";
 	use MattThommes\Debug;
+	use MattThommes\Backend\Mysql;
 	$debug = new Debug;
 
 	// database connection to your WordPress blog tables.
-	$db_conn = new Mysql("localhost", "user", "pass", "database_name");
+	$db_conn = new Mysql("localhost", "user", "password", "database_name");
 
 	require_once("auth_tokens.php");
 
