@@ -29,3 +29,7 @@ You'll then be taken to a page where you grant permission for your application t
 When you click "Allow" you land on a page where you can grab the values:
 
 ![Screenshot of Tumblr access keys](3.jpg)
+
+Next, put the name of your blog in (for whatever posts your want to fetch) in the `fetch_posts.php` script:
+
+	$blog_name = "your-blog";

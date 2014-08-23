@@ -9,11 +9,13 @@
 	$tumblr = new Tumblr\API\Client($consumer_key, $consumer_secret);
 	$tumblr->setToken($token, $token_secret);
 
+	$blog_name = "your-blog";
+
 	// get first page.
 	$page = 0;
 	$per_page = 20;
 	$options = array("offset" => $page * $per_page);
-	$tumblr_posts = $tumblr->getBlogPosts("your-blog", $options);
+	$tumblr_posts = $tumblr->getBlogPosts($blog_name, $options);
 
 //$debug->dbg($tumblr_posts);
 
@@ -63,7 +65,7 @@
 		sleep(2);
 		// get next page.
 		$options = array("offset" => $page * $per_page);
-		$tumblr_posts = $tumblr->getBlogPosts("your-blog", $options);
+		$tumblr_posts = $tumblr->getBlogPosts($blog_name, $options);
 	}
 
 ?>
