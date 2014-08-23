@@ -1,0 +1,17 @@
+{ 
+	"name": "mattthommes/tumblr_api",
+	"description": "Down and dirty scripts that interact with the Tumblr API.",
+	"authors": [{
+			"name": "Matt Thommes",
+			"email": "matt@thomm.es",
+			"homepage": "http://blog.matt.thomm.es",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"MattThommes/Global": "dev-master",
+		"tumblr/tumblr": ""
+	},
+	"homepage": "http://github.com/MattThommes/tumblr_api",
+	"minimum-stability": "dev"
+}
