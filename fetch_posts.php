@@ -9,7 +9,7 @@
 	$tumblr = new Tumblr\API\Client($consumer_key, $consumer_secret);
 	$tumblr->setToken($token, $token_secret);
 
-	$blog_name = "your-blog";
+	$blog_name = "mattthommes-blog";
 
 	// get first page.
 	$page = 0;
@@ -56,6 +56,9 @@
 					[can_reply] => 
 			)
 			*/
+
+			// the actual code you want to run for each item.
+			include "fetch_posts.inc.php";
 
 		}
 		$page++;
