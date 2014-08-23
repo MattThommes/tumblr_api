@@ -6,8 +6,8 @@
 
 	require_once("auth_tokens.php");
 
-	$tumblr = new Tumblr\API\Client($client1, $client2);
-	$tumblr->setToken($user1, $user2);
+	$tumblr = new Tumblr\API\Client($consumer_key, $consumer_secret);
+	$tumblr->setToken($token, $token_secret);
 
 	// get first page.
 	$page = 0;

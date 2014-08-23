@@ -9,15 +9,23 @@ To get started, create a file called `auth_tokens.php` and put it in the same di
 
 	<?php
 
-		$client1 = "";
-		$client2 = "";
-		$user1 = "";
-		$user2 = "";
+		$consumer_key = "";
+		$consumer_secret = "";
+		$token = "";
+		$token_secret = "";
 
 	?>
 
-The client values are for your [registered application on Tumblr](https://www.tumblr.com/oauth/apps). The user values are found after your authorize your application to have access to your Tumblr account.
+The consumer values are for your [registered application on Tumblr](https://www.tumblr.com/oauth/apps). The token values are found after you authorize your application to have access to your Tumblr account.
 
 Click "Explore API":
 
 ![Screenshot of Tumblr apps page](1.jpg)
+
+You'll then be taken to a page where you grant permission for your application to access your Tumblr account:
+
+![Screenshot of Tumblr OAuth page](2.jpg)
+
+When you click "Allow" you land on a page where you can grab the values:
+
+![Screenshot of Tumblr access keys](3.jpg)
