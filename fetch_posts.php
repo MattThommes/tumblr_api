@@ -1,19 +1,21 @@
 <?php
 
+	@ignore_user_abort(1);
+	@ini_set('max_execution_time', 950 * 60);
+	@set_time_limit(950 * 60);
+
 	require "vendor/autoload.php";
 	use MattThommes\Debug;
 	use MattThommes\Backend\Mysql;
 	$debug = new Debug;
 
+	include "db_connect.php";
 	require_once("auth_tokens.php");
-
-	// database connection (in case you want to do anything with a database).
-	$db_conn = new Mysql("localhost", "user", "password", "database_name");
 
 	$tumblr = new Tumblr\API\Client($consumer_key, $consumer_secret);
 	$tumblr->setToken($token, $token_secret);
 
-	$blog_name = "your-blog";
+	$blog_name = "mattthommes-blog";
 
 	// get first page.
 	$page = 0;
@@ -66,7 +68,7 @@
 
 		}
 		$page++;
-		/*if ($page > 0) {
+		/*if ($page > 98) {
 			break;
 		}*/
 		sleep(2);
