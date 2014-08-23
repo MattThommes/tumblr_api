@@ -37,3 +37,5 @@ This script will fetch all blog posts from any blog you have access to.
 Put the name of your blog in (for whatever posts your want to fetch) in the `fetch_posts.php` script:
 
 	$blog_name = "your-blog";
+	
+Posts are then accessible through the `$tumblr_posts` variable.
