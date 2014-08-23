@@ -30,6 +30,14 @@ When you click "Allow" you land on a page where you can grab the values:
 
 ![Screenshot of Tumblr access keys](3.jpg)
 
+If you want to interact with a database, create a file called `db_connect.php`. The contents should look like:
+
+	<?php
+
+		$db_conn = new Mysql("localhost", "user", "password", "database_name");
+
+	?>
+
 Put the name of the blog you want to access in the `fetch_posts.php` script:
 
 	$blog_name = "your-blog";
