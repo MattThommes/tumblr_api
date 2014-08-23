@@ -1,15 +1,21 @@
 <?php
 
 	require "vendor/autoload.php";
+	use MattThommes\Debug;
+	$debug = new Debug;
 
-	$tumblr = new Tumblr\API\Client("", "");
-	$tumblr->setToken("", "");
+	require_once("auth_tokens.php");
+
+	$tumblr = new Tumblr\API\Client($client1, $client2);
+	$tumblr->setToken($user1, $user2);
 
 	// get first page.
 	$page = 0;
 	$per_page = 20;
 	$options = array("offset" => $page * $per_page);
 	$tumblr_posts = $tumblr->getBlogPosts("your-blog", $options);
+
+//$debug->dbg($tumblr_posts);
 
 	while (count($tumblr_posts->posts) == $per_page) {
 		foreach ($tumblr_posts->posts as $p) {
