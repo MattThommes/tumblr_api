@@ -3,7 +3,11 @@ Tumblr API scripts
 
 Scripts that interact with the Tumblr API.
 
-## Installation
+## fetch_posts.php
+
+This script will fetch all blog posts from any blog you have access to.
+
+### Installation
 
 To get started, create a file called `auth_tokens.php` and put it in the same directory as the `fetch_posts.php` file (from this repository). The contents of `auth_tokens.php` should be
 
