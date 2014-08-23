@@ -10,7 +10,7 @@
 	],
 	"require": {
 		"MattThommes/Global": "dev-master",
-		"tumblr/tumblr": ""
+		"tumblr/tumblr": "dev-master"
 	},
 	"homepage": "http://github.com/MattThommes/tumblr_api",
 	"minimum-stability": "dev"
