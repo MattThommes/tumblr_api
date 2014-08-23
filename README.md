@@ -30,12 +30,29 @@ When you click "Allow" you land on a page where you can grab the values:
 
 ![Screenshot of Tumblr access keys](3.jpg)
 
-### fetch_posts.php
-
-This script will fetch all blog posts from any blog you have access to.
-
-Put the name of your blog in (for whatever posts your want to fetch) in the `fetch_posts.php` script:
+Put the name of the blog you want to access in the `fetch_posts.php` script:
 
 	$blog_name = "your-blog";
+
+### fetch_posts.php
+
+This script will fetch all blog posts from any blog you have access to. Posts are then accessible through the `$tumblr_posts` variable.
+
+### wordpress2tumblr.php
+
+This script will grab posts from your WordPress database and create a corresponding post on Tumblr.
+
+First we'll create a local Tumblr MySQL database to store the posts that we already moved (as a reference):
+
+	CREATE TABLE `tumblr` (
+		`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+		`wp_id` int(10) unsigned NOT NULL,
+		`tumblr_id` bigint(20) unsigned NOT NULL,
+		`wp_uri` varchar(250) NOT NULL,
+		`301` varchar(254) NOT NULL,
+		PRIMARY KEY (`id`)
+	) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 	
-Posts are then accessible through the `$tumblr_posts` variable.
+Put in your Tumblr blog domain (either the Tumblr domain, or your custom domain). This is used for setting up 301 redirects if you want to include that on your WordPress site.
+
+	$blog_domain = "blog.me.com";
