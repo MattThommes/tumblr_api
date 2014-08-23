@@ -6,10 +6,13 @@
 
 	require_once("auth_tokens.php");
 
+	// database connection (in case you want to do anything with a database).
+	$db_conn = new Mysql("localhost", "user", "password", "database_name");
+
 	$tumblr = new Tumblr\API\Client($consumer_key, $consumer_secret);
 	$tumblr->setToken($token, $token_secret);
 
-	$blog_name = "mattthommes-blog";
+	$blog_name = "your-blog";
 
 	// get first page.
 	$page = 0;
