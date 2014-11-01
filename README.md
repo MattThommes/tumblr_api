@@ -34,9 +34,26 @@ If you want to interact with a database, create a file called `db_connect.php`. 
 
 	<?php
 
+		use MattThommes\Backend\Mysql;
+
 		$db_conn = new Mysql("localhost", "user", "password", "database_name");
 
 	?>
+
+Here is an example database table that you could use to back up your Tumblr posts:
+
+	CREATE TABLE `tumblr_live` (
+		`id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+		`tumblr_id` int(11) NOT NULL,
+		`timestamp` int(11) NOT NULL,
+		`timestamp_dt` datetime NOT NULL,
+		`post_type` varchar(25) NOT NULL DEFAULT '',
+		`title` varchar(250) NOT NULL DEFAULT '',
+		`post_url` varchar(250) NOT NULL DEFAULT '',
+		`post_content` text NOT NULL,
+		`tags` varchar(150) DEFAULT NULL,
+		PRIMARY KEY (`id`)
+	);
 
 Put the name of the blog you want to access in the `fetch_posts.php` script:
 
@@ -62,7 +79,7 @@ First we'll create a local Tumblr MySQL database to store the posts that we alre
 		`301` varchar(254) NOT NULL,
 		PRIMARY KEY (`id`)
 	) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-	
+
 Put in your Tumblr blog domain (either the Tumblr domain, or your custom domain). This is used for setting up 301 redirects if you want to include that on your WordPress site.
 
 	$blog_domain = "blog.me.com";

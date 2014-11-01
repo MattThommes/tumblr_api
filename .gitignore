@@ -1,6 +1,5 @@
 auth_tokens.php
 db_connect.php
-fetch_posts.inc.php
 vendor/
 composer.lock
 composer.phar
