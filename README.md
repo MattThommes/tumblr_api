@@ -67,7 +67,7 @@ The code you want to run for each post should reside in `fetch_posts.inc.php` wh
 
 ### wordpress2tumblr.php
 
-This script will grab posts from your WordPress database and create a corresponding post on Tumblr.
+This script will grab posts from your WordPress database and create a corresponding post on Tumblr. It will also copy tags for each post and create corresponding tags on Tumblr.
 
 First we'll create a local Tumblr MySQL database table to store the posts that we already moved (as a reference):
 
