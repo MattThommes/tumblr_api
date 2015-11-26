@@ -69,7 +69,7 @@ The code you want to run for each post should reside in `fetch_posts.inc.php` wh
 
 This script will grab posts from your WordPress database and create a corresponding post on Tumblr.
 
-First we'll create a local Tumblr MySQL database to store the posts that we already moved (as a reference):
+First we'll create a local Tumblr MySQL database table to store the posts that we already moved (as a reference):
 
 	CREATE TABLE `tumblr` (
 		`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -79,6 +79,8 @@ First we'll create a local Tumblr MySQL database to store the posts that we alre
 		`301` varchar(254) NOT NULL,
 		PRIMARY KEY (`id`)
 	) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+**Make sure you have your WordPress database tables included in the same database that you referenced in this script.**
 
 Put in your Tumblr blog domain (either the Tumblr domain, or your custom domain). This is used for setting up 301 redirects if you want to include that on your WordPress site.
 
