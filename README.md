@@ -16,7 +16,7 @@ To get started, create a file called `auth_tokens.php` and put it in the same di
 
 	?>
 
-The consumer values are for your [registered application on Tumblr](https://www.tumblr.com/oauth/apps). The token values are found after you authorize your application to have access to your Tumblr account.
+The consumer values are for your [registered application on Tumblr](https://www.tumblr.com/oauth/apps). The token values are found after you authorize your application to have access to your Tumblr account. If you already have a registered application and you just want to authorize a Tumblr account to use that application, [visit the API console](https://api.tumblr.com/console) and input the consumer key and secret.
 
 Click "Explore API":
 

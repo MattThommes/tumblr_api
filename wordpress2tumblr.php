@@ -5,6 +5,10 @@
 	use MattThommes\Backend\Mysql;
 	$debug = new Debug;
 
+	function dbg($out) {
+		return $GLOBALS["debug"]->dbg($out);
+	}
+
 	// database connection to your WordPress blog tables.
 	$db_conn = new Mysql("localhost", "user", "password", "database_name");
 
