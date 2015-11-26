@@ -82,6 +82,10 @@ First we'll create a local Tumblr MySQL database table to store the posts that w
 
 **Make sure you have your WordPress database tables included in the same database that you referenced in this script.**
 
+Fill in your Tumblr username (IE: `MyTumblrUsernameHere.tumblr.com`):
+
+	$blog_name = "MyTumblrUsernameHere";
+
 Put in your Tumblr blog domain (either the Tumblr domain, or your custom domain). This is used for setting up 301 redirects if you want to include that on your WordPress site.
 
 	$blog_domain = "blog.me.com";
